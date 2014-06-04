@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <title></title>
+    <script src="../ChartNew.js"></script>
+</head>
+
+<body>
+    <canvas id="mycanvas" height="200" width="400"></canvas>
+    <script>
+    var options = {
+        inGraphDataShow: true,
+        datasetFill: true,
+        scaleLabel: "<%=value%>",
+        scaleTickSizeRight: 5,
+        scaleTickSizeLeft: 5,
+        scaleTickSizeBottom: 5,
+        scaleTickSizeTop: 5,
+        scaleFontSize: 16,
+        canvasBorders: true,
+        canvasBordersWidth: 3,
+        canvasBordersColor: "black",
+        graphTitle: "Events by Category",
+        graphTitleFontFamily: "'Helvetica'",
+        graphTitleFontSize: 16,
+        graphTitleFontStyle: "bold",
+        graphTitleFontColor: "#666",
+        legend: true,
+        legendFontFamily: "'Helvetica'",
+        legendFontSize: 12,
+        legendFontStyle: "normal",
+        legendFontColor: "#666",
+        legendBlockSize: 15,
+        legendBorders: true,
+        legendBordersWidth: 1,
+        legendBordersColors: "#666",
+        yAxisLeft: true,
+        yAxisRight: false,
+        xAxisBottom: true,
+        xAxisTop: false,
+        yAxisLabel: "Y Axis Label",
+        yAxisFontFamily: "'Helvetica'",
+        yAxisFontSize: 16,
+        yAxisFontStyle: "normal",
+        yAxisFontColor: "#666",
+        xAxisLabel: "pX Axis Label",
+        xAxisFontFamily: "'Helvetica'",
+        xAxisFontSize: 16,
+        xAxisFontStyle: "normal",
+        xAxisFontColor: "#666",
+        yAxisUnit: "Y Unit",
+        yAxisUnitFontFamily: "'Helvetica'",
+        yAxisUnitFontSize: 8,
+        yAxisUnitFontStyle: "normal",
+        yAxisUnitFontColor: "#666",
+        annotateDisplay: true,
+        spaceTop: 0,
+        spaceBottom: 0,
+        spaceLeft: 0,
+        spaceRight: 0,
+        logarithmic: false,
+        //      showYAxisMin : false,
+        rotateLabels: "smart",
+        xAxisSpaceOver: 0,
+        xAxisSpaceUnder: 0,
+        xAxisLabelSpaceAfter: 0,
+        xAxisLabelSpaceBefore: 0,
+        legendBordersSpaceBefore: 0,
+        legendBordersSpaceAfter: 0,
+        footNoteSpaceBefore: 0,
+        footNoteSpaceAfter: 0,
+        startAngle: 0,
+        dynamicDisplay: true,
+        animationSteps : 20,
+        //String - Animation easing effect
+        animationEasing : "easeOutQuart"
+    };
+
+    var data = [{
+        value: 30,
+        color: "#D97041",
+        title: "Category A"
+    }, {
+        value: 90,
+        color: "#C7604C",
+        title: "Category B"
+    }, {
+        value: 24,
+        color: "#21323D",
+        title: "Category C"
+    }];
+
+    window.onload = function() {
+        var myLine = new Chart(document.getElementById("mycanvas").getContext("2d")).Pie(data, options);
+    }
+    </script>
+
+</body>
+</html>
